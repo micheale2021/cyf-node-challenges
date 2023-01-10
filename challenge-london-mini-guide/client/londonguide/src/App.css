@@ -1,0 +1,18 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.App {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
