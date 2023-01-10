@@ -2,7 +2,7 @@ const express = require("express");
 const harrow = require("./data/Harrow.json");
 const heathrow = require("./data/Heathrow.json");
 const stratford = require("./data/Stratford.json");
-
+require("dotenv").config();
 const app = express();
 app.use(express.json());
 
@@ -85,7 +85,7 @@ app.get("/:city/:category", (req, res) => {
   res.send(city.hospitals);
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000 ;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
